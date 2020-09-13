@@ -37,17 +37,6 @@ public class Player {
         else if (!keyLeft && keyRight)
             xSpeed++;
 
-//        if (keyUp){
-//            hitBox.y++;
-//            ySpeed++;
-////            for(Wall wall: panel.walls){
-//                if (wall.hitBox.intersects(hitBox))
-//                    ySpeed = -6;
-//            }
-//            hitBox.y--;
-//        }
-//        ySpeed += 0.3;
-
         //x-axis collision
         hitBox.x += xSpeed;
         for(Wall wall: panel.walls){
