@@ -8,7 +8,7 @@ public class MainClass {
     public  static void main(String[] args){
         MainFrame frame = new MainFrame();
 
-        frame.setSize(500, 500);
+        frame.setSize(700, 700);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         //setting the location of our window to  be in the middle
         frame.setLocation((int)(screenSize.getWidth()/2 - frame.getSize().getWidth()/2 ), (int)(screenSize.getHeight()/2 - frame.getSize().getHeight()/2));

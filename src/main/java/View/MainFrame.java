@@ -8,6 +8,8 @@ public class MainFrame extends javax.swing.JFrame {
         panel.setVisible(true);
         //add panel to the JFrame or it wont be visible
         this.add(panel);
+
+        addKeyListener(new KeyChecker(panel));
     }
 
 }

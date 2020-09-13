@@ -1,12 +1,78 @@
 package View;
 
+import java.awt.*;
+
 public class Player {
 
     GamePanel panel;
     int x;
     int y;
+    int width;
+    int height;
+
+    double xSpeed;
+    double ySpeed;
+
+    Rectangle hitBox;
+
+    boolean keyLeft;
+    boolean keyRight;
+    boolean keyUp;
+    boolean keyDown;
     //x@param x is where the Player starts
     public Player(int x, int y, GamePanel panel){
     this.panel = panel;
+    this.x = x;
+    this.y = y;
+    width = 50;
+    height = 100;
+    hitBox = new Rectangle(x, y, width,height);
+    }
+    public void set(){
+
+        if (keyLeft && keyRight || !keyLeft && !keyRight)
+            xSpeed *= 0.8;
+        else if (keyLeft && !keyRight)
+            xSpeed--;
+        else if (!keyLeft && keyRight)
+            xSpeed++;
+
+        if (keyUp && keyDown || !keyUp && !keyDown)
+            ySpeed *= 0.8;
+        else if (keyUp && !keyDown)
+            ySpeed--;
+        else if (!keyUp && keyDown)
+            ySpeed++;
+
+        //setting the max speed
+        if (xSpeed > 4)
+            xSpeed = 4;
+        if (xSpeed < -4)
+            xSpeed = -4;
+        if (ySpeed > 4)
+            ySpeed = 4;
+        if (ySpeed < -4)
+            ySpeed = -4;
+
+        //preventing the player from sliding
+        if (xSpeed > 0 && xSpeed < 0.75)
+            xSpeed = 0;
+        if (xSpeed < 0 && xSpeed > -0.75)
+            xSpeed = 0;
+        if (ySpeed > 0 && ySpeed < 0.75)
+            ySpeed = 0;
+        if (ySpeed < 0 && ySpeed > -0.75)
+            ySpeed = 0;
+
+            x+=xSpeed;
+            y+=ySpeed;
+
+            hitBox.x = x;
+            hitBox.y = y;
+    }
+    public  void draw(Graphics2D gtd){
+        gtd.setColor(Color.black);
+        gtd.fillRect(x,y,width,height);
+
     }
 }
