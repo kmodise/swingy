@@ -24,8 +24,8 @@ public class Player {
     this.panel = panel;
     this.x = x;
     this.y = y;
-    width = 50;
-    height = 100;
+    width = 20;
+    height = 20;
     hitBox = new Rectangle(x, y, width,height);
     }
     public void set(){
@@ -37,15 +37,16 @@ public class Player {
         else if (!keyLeft && keyRight)
             xSpeed++;
 
-        if (keyUp){
-            hitBox.y++;
-            for(Wall wall: panel.walls){
-                if (wall.hitBox.intersects(hitBox))
-                    ySpeed = -6;
-            }
-            hitBox.y--;
-        }
-        ySpeed += 0.3;
+//        if (keyUp){
+//            hitBox.y++;
+//            ySpeed++;
+////            for(Wall wall: panel.walls){
+//                if (wall.hitBox.intersects(hitBox))
+//                    ySpeed = -6;
+//            }
+//            hitBox.y--;
+//        }
+//        ySpeed += 0.3;
 
         //x-axis collision
         hitBox.x += xSpeed;
@@ -78,32 +79,32 @@ public class Player {
         }
 
 
-//        if (keyUp && keyDown || !keyUp && !keyDown)
-//            ySpeed *= 0.8;
-//        else if (keyUp && !keyDown)
-//            ySpeed--;
-//        else if (!keyUp && keyDown)
-//            ySpeed++;
+        if (keyUp && keyDown || !keyUp && !keyDown)
+            ySpeed *= 0.8;
+        else if (keyUp && !keyDown)
+            ySpeed--;
+        else if (!keyUp && keyDown)
+            ySpeed++;
 
         //setting the max speed
         if (xSpeed > 4)
             xSpeed = 4;
         if (xSpeed < -4)
             xSpeed = -4;
-//        if (ySpeed > 4)
-//            ySpeed = 4;
-//        if (ySpeed < -4)
-//            ySpeed = -4;
+        if (ySpeed > 4)
+            ySpeed = 4;
+        if (ySpeed < -4)
+            ySpeed = -4;
 
         //preventing the player from sliding
         if (xSpeed > 0 && xSpeed < 0.75)
             xSpeed = 0;
         if (xSpeed < 0 && xSpeed > -0.75)
             xSpeed = 0;
-//        if (ySpeed > 0 && ySpeed < 0.75)
-//            ySpeed = 0;
-//        if (ySpeed < 0 && ySpeed > -0.75)
-//            ySpeed = 0;
+        if (ySpeed > 0 && ySpeed < 0.75)
+            ySpeed = 0;
+        if (ySpeed < 0 && ySpeed > -0.75)
+            ySpeed = 0;
 
             x+=xSpeed;
             y+=ySpeed;
