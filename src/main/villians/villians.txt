@@ -1,0 +1,6 @@
+Villianname Villianclass  Level  Experience   Attack(out of 100)   Defense(out of 100)   HitPoints(out of 100)
+
+NoInternet  A         5       12200               100                 100               20
+Covid-19    A         5       12200               100                 100                    90
+2020        c         1       1000                10                  10                    10
+Bojack.H    B         4       8050                80                  80                    80
