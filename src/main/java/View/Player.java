@@ -3,7 +3,6 @@ package View;
 import java.awt.*;
 
 import javax.swing.JOptionPane;
-import javax.swing.Popup;
 
 public class Player{
 
