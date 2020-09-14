@@ -2,7 +2,10 @@ package View;
 
 import java.awt.*;
 
-public class Player {
+import javax.swing.JOptionPane;
+import javax.swing.Popup;
+
+public class Player{
 
     GamePanel panel;
     int x;
@@ -28,6 +31,9 @@ public class Player {
     height = 20;
     hitBox = new Rectangle(x, y, width,height);
     }
+
+
+      
     public void set(){
 
         if (keyLeft && keyRight || !keyLeft && !keyRight)
@@ -46,8 +52,11 @@ public class Player {
                     hitBox.x += Math.signum(xSpeed);
                 }
                 hitBox.x -= Math.signum(xSpeed);
-                xSpeed = 0;
-                x = hitBox.x;
+                JOptionPane.showMessageDialog(null, "you win","Nice",JOptionPane.INFORMATION_MESSAGE);
+                System.exit(1);
+                
+                // xSpeed = 0;
+                // x = hitBox.x;
             }
         }
 
