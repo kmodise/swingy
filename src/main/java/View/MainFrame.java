@@ -1,7 +1,10 @@
 package View;
 
+import javax.swing.*;
+
 public class MainFrame extends javax.swing.JFrame {
     public MainFrame(){
+
         GamePanel panel = new GamePanel();
         panel.setLocation(0,0);
         panel.setSize(this.getSize());

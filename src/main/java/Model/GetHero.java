@@ -1,13 +1,11 @@
 package Model;
 
+import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.List;
 
 public class GetHero {
     BufferedReader heroObj;
@@ -70,16 +68,9 @@ public class GetHero {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return heroes.get(1);
-//        sortHeroStats(heroes.get(1));
-//        this.Heroname = getHeroName(heroes.get(1));
-//        this.Heroclass = getHeroClass(heroes.get(1));
-//       this.Level = getLevel(heroes.get(1));
-//        this.Experience = getExperiments(heroes.get(1));
-//       this.Attack = getAttack(heroes.get(1));
-//       this.Defense = getDefence(heroes.get(1));
-//        this.HitPoints = getHitPoints(heroes.get(1));
-//        System.out.println(this.Heroname);
-
+//        JOptionPane.showMessageDialog(null,heroes);
+        int i = Integer.parseInt(JOptionPane.showInputDialog(null, "Choose a hero"));
+        System.out.println(heroes.get(i));
+        return heroes.get(i);
     }
 }

@@ -5,12 +5,23 @@ import Model.GetHero;
 import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class MainClass {
-    public  static void main(String[] args){
-        GetHero getHero = new GetHero();
-        getHero.heroStats();
+    public  static void main(String[] args) throws IOException {
+        BufferedReader listOfHeroes = new BufferedReader(new FileReader("C:\\Users\\the-kb\\Desktop\\swingy\\src\\main\\java\\Model\\heroesDisplay.txt"));
+        StringBuilder printHeroes = new StringBuilder();
+        String s;
+        while ((s = listOfHeroes.readLine()) != null ){
+            printHeroes.append(s + '\n');
+        }
+        JOptionPane.showMessageDialog(null, printHeroes);
+
+//        GetHero getHero = new GetHero();
+//        getHero.heroStats();
         MainFrame frame = new MainFrame();
 
         frame.setSize(700, 700);

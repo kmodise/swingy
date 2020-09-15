@@ -14,7 +14,6 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
     ArrayList<Wall>  walls = new ArrayList<>();
     Timer gameTimer;
     public GamePanel(){
-        JOptionPane.showMessageDialog(null, "TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!","Nice",JOptionPane.INFORMATION_MESSAGE);
 
         player = new Player(400, 300,  this);
 

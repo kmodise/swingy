@@ -40,7 +40,7 @@ GetHero getHero = new GetHero();
         this.Attack = getHero.Attack;
         this.Defense = getHero.Defense;
         this.HitPoints = getHero.HitPoints;
-        System.out.println(Heroclass);
+        System.out.println(Heroname);
     this.panel = panel;
     this.x = x;
     this.y = y;
