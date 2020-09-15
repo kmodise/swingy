@@ -1,11 +1,16 @@
 package View;
 
+import Model.GetHero;
+
 import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.io.IOException;
 
 public class MainClass {
     public  static void main(String[] args){
+        GetHero getHero = new GetHero();
+        getHero.heroStats();
         MainFrame frame = new MainFrame();
 
         frame.setSize(700, 700);

@@ -1,11 +1,21 @@
 package View;
 
 import java.awt.*;
-
+import Model.GetHero;
 import javax.swing.JOptionPane;
 
 public class Player{
 
+GetHero getHero = new GetHero();
+    //hero specifications
+   String Heroname = getHero.Heroname;
+    char  Heroclass;
+    int     Level;
+    int     Experience;
+    int     Attack;
+    int     Defense;
+    int     HitPoints;
+    
     GamePanel panel;
     int x;
     int y;
@@ -23,6 +33,14 @@ public class Player{
     boolean keyDown;
     //x@param x is where the Player starts
     public Player(int x, int y, GamePanel panel){
+        this.Heroname = getHero.Heroname;
+        this.Heroclass = getHero.Heroclass;
+        this.Level = getHero.Level;
+        this.Experience = getHero.Experience;
+        this.Attack = getHero.Attack;
+        this.Defense = getHero.Defense;
+        this.HitPoints = getHero.HitPoints;
+        System.out.println(Heroclass);
     this.panel = panel;
     this.x = x;
     this.y = y;
