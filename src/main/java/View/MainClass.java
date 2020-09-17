@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class MainClass {
     public  static void main(String[] args) throws IOException {
-        BufferedReader listOfHeroes = new BufferedReader(new FileReader("C:\\Users\\the-kb\\Desktop\\swingy\\src\\main\\java\\Model\\heroesDisplay.txt"));
+        BufferedReader listOfHeroes = new BufferedReader(new FileReader("src\\main\\java\\Model\\heroesDisplay.txt"));
         StringBuilder printHeroes = new StringBuilder();
         String s;
         while ((s = listOfHeroes.readLine()) != null ){

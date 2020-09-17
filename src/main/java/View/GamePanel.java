@@ -12,13 +12,14 @@ import java.util.TimerTask;
 public class GamePanel extends javax.swing.JPanel implements ActionListener {
     Player player;
     ArrayList<Wall>  walls = new ArrayList<>();
+    ArrayList<Enemy> enemies = new ArrayList<>();
     Timer gameTimer;
     public GamePanel(){
 
         player = new Player(400, 300,  this);
 
         makeWalls();
-
+        Enemies();
         gameTimer = new Timer();
 
     gameTimer.schedule(new TimerTask(){
@@ -39,6 +40,19 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
         walls.add(new Wall(650, 10,10,590));
         walls.add(new Wall(50, 0,10,590));
 
+
+
+    }
+
+    public void Enemies(){
+//don't forget to randomise the enemy positions;
+        enemies.add(new Enemy(300, 400,50,50, 80, 43));
+        enemies.add(new Enemy(90, 400,50,50, 40, 30));
+        enemies.add(new Enemy(400, 90,60,80, 90,50));
+        enemies.add(new Enemy(600, 500,50,50, 80, 43));
+        enemies.add(new Enemy(550, 50,50,50, 80, 43));
+        enemies.add(new Enemy(150, 4610,50,30, 80, 43));
+
     }
 
     public  void paint(Graphics g){
@@ -48,6 +62,9 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
         player.draw(gtd);
         for (Wall wall: walls){
             wall.draw(gtd);
+        }
+        for(Enemy enemy: enemies){
+            enemy.draw(gtd);
         }
     }
 

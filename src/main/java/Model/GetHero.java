@@ -58,7 +58,7 @@ public class GetHero {
 
         ArrayList<String> heroes = new ArrayList<>();
 
-        try(BufferedReader buffObj = new BufferedReader(new FileReader("C:\\Users\\the-kb\\Desktop\\swingy\\src\\main\\java\\Model\\heroes.txt"))){
+        try(BufferedReader buffObj = new BufferedReader(new FileReader("src\\main\\java\\Model\\heroes.txt"))){
             String s;
             while((s = buffObj.readLine() )!= null){
                 heroes.add(s);

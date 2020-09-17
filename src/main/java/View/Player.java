@@ -9,12 +9,12 @@ public class Player{
 GetHero getHero = new GetHero();
     //hero specifications
    String Heroname = getHero.Heroname;
-    char  Heroclass;
-    int     Level;
-    int     Experience;
-    int     Attack;
-    int     Defense;
-    int     HitPoints;
+    char  Heroclass = getHero.Heroclass;
+    int     Level = getHero.Level;
+    int     Experience = getHero.Experience;
+    int     Attack = getHero.Attack;
+    int     Defense = getHero.Defense;
+    int     HitPoints = getHero.HitPoints;
     
     GamePanel panel;
     int x;
@@ -59,6 +59,15 @@ GetHero getHero = new GetHero();
             xSpeed--;
         else if (!keyLeft && keyRight)
             xSpeed++;
+
+        //enemy collision
+        hitBox.x += xSpeed;
+        for(Enemy enemy: panel.enemies){
+            if(enemy.hitBox.intersects(hitBox)){
+                hitBox.x -= xSpeed;
+                JOptionPane.showMessageDialog(null,"fight or flight?");
+            }
+        }
 
         //x-axis collision
         hitBox.x += xSpeed;
