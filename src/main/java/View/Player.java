@@ -4,7 +4,15 @@ import java.awt.*;
 import Model.GetHero;
 import javax.swing.JOptionPane;
 
+
 public class Player{
+
+    int fight(int PlayerAttack, int EnemyDefence ){
+        if (PlayerAttack > EnemyDefence){
+            return (1);
+        }
+        return (0);
+    }
 
 GetHero getHero = new GetHero();
     //hero specifications
@@ -64,14 +72,43 @@ GetHero getHero = new GetHero();
         hitBox.x += xSpeed;
         for(Enemy enemy: panel.enemies){
             if(enemy.hitBox.intersects(hitBox)){
+                int option = Integer.parseInt(JOptionPane.showInputDialog(null, "1 == fight \n2 == run"));
+                if (option == 1){
+                    if (fight(Attack,enemy.Defence) == 0) {
+                        JOptionPane.showMessageDialog(null, "X YOU LOSE, ENEMY TOO STRONG");
+                        System.exit(1);
+                    }else{
+                           //the wall need to disappear;
+                    }
+                    //else??
+                }
+
                 hitBox.x -= xSpeed;
-                JOptionPane.showMessageDialog(null,"fight or flight?");
+            }
+        }
+
+        //y-axis enemy collision
+        for(Enemy enemy: panel.enemies){
+            if(enemy.hitBox.intersects(hitBox)){
+                int option = Integer.parseInt(JOptionPane.showInputDialog(null, "1 == Fight\n2 == Run"));
+                if (option == 1){
+                    if (fight(Attack,enemy.Defence) == 0) {
+                        JOptionPane.showMessageDialog(null, "Y enemy too strong YOU LOSE");
+                        System.exit(1);
+                    }else {
+                        //the enemy needs to disappear;
+                    }
+
+
+                }
+                hitBox.y -= xSpeed;
             }
         }
 
         //x-axis collision
         hitBox.x += xSpeed;
         for(Wall wall: panel.walls){
+
             if (wall.hitBox.intersects(hitBox)){
                 hitBox.x -= xSpeed;
                 while (!wall.hitBox.intersects(hitBox)){
@@ -80,11 +117,11 @@ GetHero getHero = new GetHero();
                 hitBox.x -= Math.signum(xSpeed);
                 JOptionPane.showMessageDialog(null, "you win","Nice",JOptionPane.INFORMATION_MESSAGE);
                 System.exit(1);
-                
                 // xSpeed = 0;
                 // x = hitBox.x;
             }
         }
+
 
 
         //y-axis collision

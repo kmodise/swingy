@@ -46,7 +46,7 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
 
     public void Enemies(){
 //don't forget to randomise the enemy positions;
-        enemies.add(new Enemy(300, 400,50,50, 80, 43));
+        enemies.add(new Enemy(300, 400,50,50, 80, 90));
         enemies.add(new Enemy(90, 400,50,50, 40, 30));
         enemies.add(new Enemy(400, 90,60,80, 90,50));
         enemies.add(new Enemy(600, 500,50,50, 80, 43));
