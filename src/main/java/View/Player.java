@@ -68,6 +68,7 @@ GetHero getHero = new GetHero();
         else if (!keyLeft && keyRight)
             xSpeed++;
 
+        System.out.println(panel.enemies);
         //enemy collision
         hitBox.x += xSpeed;
         for(Enemy enemy: panel.enemies){
@@ -78,7 +79,12 @@ GetHero getHero = new GetHero();
                         JOptionPane.showMessageDialog(null, "X YOU LOSE, ENEMY TOO STRONG");
                         System.exit(1);
                     }else{
+                                enemy.hitBox.setSize(0,0);
+                        xSpeed = 0;
+                        ySpeed = 0;
+                        //hitbox needs to be disabled or
                            //the wall need to disappear;
+//                        panel.enemies = null;
                     }
                     //else??
                 }
@@ -97,6 +103,13 @@ GetHero getHero = new GetHero();
                         System.exit(1);
                     }else {
                         //the enemy needs to disappear;
+                        enemy.hitBox.setSize(0,0);
+                        ySpeed = 0;
+                        xSpeed = 0;
+
+
+//                        panel.enemies = null;
+
                     }
 
 
