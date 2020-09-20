@@ -8,17 +8,54 @@ import java.awt.Toolkit;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 public class MainClass {
     public  static void main(String[] args) throws IOException {
-        BufferedReader listOfHeroes = new BufferedReader(new FileReader("src\\main\\java\\Model\\heroesDisplay.txt"));
-        StringBuilder printHeroes = new StringBuilder();
-        String s;
-        while ((s = listOfHeroes.readLine()) != null ){
-            printHeroes.append(s + '\n');
+        int option = Integer.parseInt(JOptionPane.showInputDialog(null, "1 == create hero\n2 == choose hero"));
+        
+            
+        if (option == 1){
+            String heroname = JOptionPane.showInputDialog(null, "heroName");
+            String heroClass = JOptionPane.showInputDialog(null, "heroClass [A - C]");
+            String herolevel = JOptionPane.showInputDialog(null, "heroLevel [1 - 4]");
+            String heroCExperience = JOptionPane.showInputDialog(null, "heroExperience");
+            String heroAttack = JOptionPane.showInputDialog(null, "heroAttack [0 - 100");
+            String heroDefence = JOptionPane.showInputDialog(null, "heroDefence [1 - 100]");
+            String heroHitpoints = JOptionPane.showInputDialog(null, "heroHitpoints [1 - 100]");
+
+
+            // FileWriter addHero = new FileWriter("src\\main\\java\\Model\\heroes.txt",true);
+            String hero = "\n" + heroname + " " + heroClass + " " + herolevel + " " + heroCExperience + " " + heroAttack + " " + heroDefence + " " + heroHitpoints;
+            try {
+                Files.write(Paths.get("src\\main\\java\\Model\\heroes.txt"), hero.getBytes(), StandardOpenOption.APPEND);
+            }catch (IOException e) {
+                System.out.println(e);
+            }
+
+            String displayHero = "\n" + "			  " + heroname + "			  " + heroClass + "			  " + herolevel + "			  " + heroCExperience + "			  " + heroAttack + "			  " + heroDefence + "			  " + heroHitpoints;
+            try {
+                Files.write(Paths.get("src\\main\\java\\Model\\heroesDisplay.txt"), displayHero.getBytes(), StandardOpenOption.APPEND);
+            }catch (IOException e) {
+                System.out.println(e);
+            }
+
+
         }
-        JOptionPane.showMessageDialog(null, printHeroes);
+
+        BufferedReader listOfHeroes = new BufferedReader(new FileReader("src\\main\\java\\Model\\heroesDisplay.txt"));
+            StringBuilder printHeroes = new StringBuilder();
+            String s;
+            while ((s = listOfHeroes.readLine()) != null ){
+                printHeroes.append(s + '\n');
+            }
+            JOptionPane.showMessageDialog(null, printHeroes);
+        
+        
 
 //        GetHero getHero = new GetHero();
 //        getHero.heroStats();
