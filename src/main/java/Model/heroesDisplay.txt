@@ -1,13 +1,13 @@
                                                                     REMEMBER THE NUMBER OF THE HERO YOU WANT TO CHOOSE
 
-HeroNO         Heroname            Heroclass                     Level                Experience              Attack(out of 100)              Defense(out of 100)                  HitPoints(out of 100)
+HeroNO   Heroname     Heroclass      Level     Experience     Attack(out of 100)     Defense(out of 100)     HitPoints(out of 100)
 
-[1]                     Kmodise                       A                            5                          12200Px                         100                                                 100                                                100
+[1]       Kmodise       A            5         12200Px           100                    100                  100
 
-[2]                     dogBoy                          B                            2                           2450Px                            43                                                  40                                                  20
+[2]       dogBoy        B            2         2450Px            43                     40                   20
 
-[3]                     Covid-18                        A                             5                          12200Px                           90                                                  90                                                 90
+[3]      Covid-18       A            5         12200Px           90                     90                   90
 
-[4]                     2020                               C                             1                           1000Px                            10                                                  10                                                 10
+[4]      2020           C            1         1000Px            10                     10                   10
 
-[5]                     Kea                                B                             4                            8050Px                           80                                                  80                                                 80
+[5]      Kea            B            4         8050Px            80                     80                   80

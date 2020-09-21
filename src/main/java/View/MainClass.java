@@ -24,20 +24,20 @@ public class MainClass {
             String heroClass = JOptionPane.showInputDialog(null, "heroClass [A - C]");
             String herolevel = JOptionPane.showInputDialog(null, "heroLevel [1 - 4]");
             String heroCExperience = JOptionPane.showInputDialog(null, "heroExperience");
-            String heroAttack = JOptionPane.showInputDialog(null, "heroAttack [0 - 100");
+            String heroAttack = JOptionPane.showInputDialog(null, "heroAttack [0 - 100]");
             String heroDefence = JOptionPane.showInputDialog(null, "heroDefence [1 - 100]");
             String heroHitpoints = JOptionPane.showInputDialog(null, "heroHitpoints [1 - 100]");
 
 
             // FileWriter addHero = new FileWriter("src\\main\\java\\Model\\heroes.txt",true);
-            String hero = "\n" + heroname + " " + heroClass + " " + herolevel + " " + heroCExperience + " " + heroAttack + " " + heroDefence + " " + heroHitpoints;
+            String hero = heroname + " " + heroClass + " " + herolevel + " " + heroCExperience + " " + heroAttack + " " + heroDefence + " " + heroHitpoints + "\n";
             try {
                 Files.write(Paths.get("src\\main\\java\\Model\\heroes.txt"), hero.getBytes(), StandardOpenOption.APPEND);
             }catch (IOException e) {
                 System.out.println(e);
             }
 
-            String displayHero = "\n" + "			  " + heroname + "			  " + heroClass + "			  " + herolevel + "			  " + heroCExperience + "			  " + heroAttack + "			  " + heroDefence + "			  " + heroHitpoints;
+            String displayHero = "\n" + "   Name ====> " + heroname + "    Class ====> " + heroClass + "   Level ===> " + herolevel + "   Experience ===> " + heroCExperience + "   Attack ===> " + heroAttack + "  Defence ===> " + heroDefence + "    Hitpoints === > " + heroHitpoints;
             try {
                 Files.write(Paths.get("src\\main\\java\\Model\\heroesDisplay.txt"), displayHero.getBytes(), StandardOpenOption.APPEND);
             }catch (IOException e) {
