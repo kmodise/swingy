@@ -79,7 +79,8 @@ GetHero getHero = new GetHero();
                         JOptionPane.showMessageDialog(null, "X YOU LOSE, ENEMY TOO STRONG");
                         System.exit(1);
                     }else{
-                                enemy.hitBox.setSize(0,0);
+                        //not working
+                                enemy.hitBox.setLocation(1000, 1000);
                         xSpeed = 0;
                         ySpeed = 0;
                         //hitbox needs to be disabled or
@@ -87,6 +88,11 @@ GetHero getHero = new GetHero();
 //                        panel.enemies = null;
                     }
                     //else??
+                    
+                }
+                else{
+                    xSpeed = x;
+                    ySpeed = y;
                 }
 
                 hitBox.x -= xSpeed;
@@ -103,7 +109,7 @@ GetHero getHero = new GetHero();
                         System.exit(1);
                     }else {
                         //the enemy needs to disappear;
-                        enemy.hitBox.setSize(0,0);
+                        enemy.hitBox.setLocation(1000, 1000);
                         ySpeed = 0;
                         xSpeed = 0;
 
@@ -111,8 +117,14 @@ GetHero getHero = new GetHero();
 //                        panel.enemies = null;
 
                     }
+                    //WORKING HERE   fggjrsdlgjrgjreorejgoerigjeriogjreoigjreoigjregioerhjioerjgier
+                    
 
 
+                }
+                else{
+                    xSpeed = x;
+                    ySpeed = y;
                 }
                 hitBox.y -= xSpeed;
             }
