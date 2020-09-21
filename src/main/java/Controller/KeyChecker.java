@@ -1,4 +1,6 @@
-package View;
+package Controller;
+
+import View.GamePanel;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;

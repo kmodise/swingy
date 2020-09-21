@@ -57,8 +57,6 @@ GetHero getHero = new GetHero();
     hitBox = new Rectangle(x, y, width,height);
     }
 
-
-      
     public void set(){
 
         if (keyLeft && keyRight || !keyLeft && !keyRight)

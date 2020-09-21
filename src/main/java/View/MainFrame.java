@@ -1,6 +1,6 @@
 package View;
 
-import javax.swing.*;
+import Controller.KeyChecker;
 
 public class MainFrame extends javax.swing.JFrame {
     public MainFrame(){
