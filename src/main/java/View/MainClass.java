@@ -13,12 +13,17 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+@interface validateOption
+{
+    int option() default 1;
+}
 
 public class MainClass {
+
     public  static void main(String[] args) throws IOException {
+
         int option = Integer.parseInt(JOptionPane.showInputDialog(null, "1 == create hero\n2 == choose hero"));
         
-            
         if (option == 1){
             String heroname = JOptionPane.showInputDialog(null, "heroName");
             String heroClass = JOptionPane.showInputDialog(null, "heroClass [A - C]");
@@ -43,8 +48,6 @@ public class MainClass {
             }catch (IOException e) {
                 System.out.println(e);
             }
-
-
         }
 
         BufferedReader listOfHeroes = new BufferedReader(new FileReader("src\\main\\java\\Model\\heroesDisplay.txt"));
