@@ -23,7 +23,7 @@ public class MainClass {
 
     public  static void main(String[] args) throws IOException {
         if (args.length == 0){
-            System.err.println("Coose a game mode");
+            System.err.println("Choose a game mode");
             System.exit(1);
         }
             if (args[0] == null){
@@ -31,7 +31,7 @@ public class MainClass {
                 System.exit(1);
             }
             else if (args[0].equals("console")){
-                System.out.println("Working On It");
+                new Console();
             }
             else if (args[0].equals("gui")){
         int option = Integer.parseInt(JOptionPane.showInputDialog(null, "1 == create hero\n2 == choose hero"));
