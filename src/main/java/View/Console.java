@@ -26,7 +26,6 @@ public class Console {
                 System.out.println(s);
             }
 
-
         }
         else{
             System.out.println("not a valid choice");
