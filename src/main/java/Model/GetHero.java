@@ -19,36 +19,36 @@ public class GetHero {
    public int     HitPoints = getHitPoints(heroStats());
 
 
-    public  String getHeroName(String heroStats){
+    public static String getHeroName(String heroStats){
         String[] heroName = heroStats.split(" ");
         return heroName[0];
     }
-    public  char getHeroClass(String heroStats){
+    public static char getHeroClass(String heroStats){
         String[] Class = heroStats.split(" ");
         return Class[1].charAt(0);
     }
 
-    public  int getLevel(String heroStats){
+    public static  int getLevel(String heroStats){
         String[] Level = heroStats.split(" ");
         return Integer.parseInt(Level[2]);
     }
 
-    public  int getExperience(String heroStats){
+    public static  int getExperience(String heroStats){
         String[] Experiments = heroStats.split(" ");
         return Integer.parseInt(Experiments[3]);
     }
 
-    public  int getAttack(String heroStats){
+    public static  int getAttack(String heroStats){
         String[] Attack = heroStats.split(" ");
         return Integer.parseInt(Attack[4]);
     }
 
-    public  int getDefence(String heroStats){
+    public static  int getDefence(String heroStats){
         String[] Defence = heroStats.split(" ");
         return Integer.parseInt(Defence[5]);
     }
 
-    public  int getHitPoints(String heroStats){
+    public  static int getHitPoints(String heroStats){
         String[] HitPl = heroStats.split(" ");
         return Integer.parseInt(HitPl[6]);
     }
