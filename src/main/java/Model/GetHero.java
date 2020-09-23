@@ -23,7 +23,6 @@ public class GetHero {
    public int     Defense = getDefence(heroStats());
    public int     HitPoints = getHitPoints(heroStats());
 
-    ;
     public static String getHeroName(String heroStats){
         String[] heroName = heroStats.split(" ");
         return heroName[0];
