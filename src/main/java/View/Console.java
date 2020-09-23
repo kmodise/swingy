@@ -23,7 +23,7 @@ public class Console {
         System.out.print("               ------>HOW IT WORKS<--------                                \n");
         System.out.print("              You are in an arena                        \n");
         System.out.print("      and have to get to the other side               \n");
-        System.out.print("      You can run away from enemies untill you reach the other side     \n");
+        System.out.print("      You can run away from enemies until you reach the other side     \n");
         System.out.print("      Or you can fight your way to the other side    \n");
         System.out.print("--------------------------------------------------------------------------------------------|\n");
         System.out.println("1 = create hero\n2 = choose hero");
