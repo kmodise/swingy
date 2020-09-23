@@ -7,8 +7,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
 public class GetHero {
     BufferedReader heroObj;
+   public  @interface inputCheck{
+       String heroStats();
+    }
+
 
     public String Heroname = getHeroName(heroStats());
    public char  Heroclass = getHeroClass(heroStats());
@@ -18,7 +23,7 @@ public class GetHero {
    public int     Defense = getDefence(heroStats());
    public int     HitPoints = getHitPoints(heroStats());
 
-
+    ;
     public static String getHeroName(String heroStats){
         String[] heroName = heroStats.split(" ");
         return heroName[0];
@@ -27,7 +32,6 @@ public class GetHero {
         String[] Class = heroStats.split(" ");
         return Class[1].charAt(0);
     }
-
     public static  int getLevel(String heroStats){
         String[] Level = heroStats.split(" ");
         return Integer.parseInt(Level[2]);
@@ -69,8 +73,10 @@ public class GetHero {
             e.printStackTrace();
         }
 //        JOptionPane.showMessageDialog(null,heroes);
+
         int i = Integer.parseInt(JOptionPane.showInputDialog(null, "Choose a hero"));
         System.out.println(heroes.get(i));
+        ;
         return heroes.get(i);
     }
 }

@@ -18,7 +18,7 @@ import java.util.Scanner;
 {
     int option() default 1;
 }
-
+@validateOption
 public class MainClass {
 
     public  static void main(String[] args) throws IOException {
