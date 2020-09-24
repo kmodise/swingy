@@ -116,9 +116,8 @@ public class Console {
         Random randomObj = new Random();
         while (movement < wall){
             isThereAnEnemy = randomObj.nextInt(2);
-            System.out.println(isThereAnEnemy);
             if (isEnemy() == 1){
-                System.out.println("you have Encountered and enemy\n1 == FIGHT\n2 == RUN");
+                System.out.println("you have Encountered an enemy\n1 == FIGHT\n2 == RUN");
                 Scanner sObj = new Scanner(System.in);
                 int runOrFight = sObj.nextInt();
                 if (runOrFight == 1){
@@ -127,7 +126,7 @@ public class Console {
                         System.exit(1);
                     }
                     else {
-                        System.out.println("ENEMY DEFEATED");
+                        System.out.println("ENEMY DEFEATED AND YOU TOOK A STEP FOWARD");
                     }
                 }
                 else if (runOrFight == 2){
@@ -138,6 +137,7 @@ public class Console {
             }
             if (step != 0){
                 System.out.println(" YOU TOOK A STEP FORWARD");
+                step = 1;
             }
 
             movement++;

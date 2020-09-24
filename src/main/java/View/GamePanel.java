@@ -47,11 +47,63 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
     public void Enemies(){
 //don't forget to randomise the enemy positions;
         enemies.add(new Enemy(300, 400,50,50, 80, 90));
+        enemies.add(new Enemy(300, 100,50,50, 80, 90));
+        
+        //x = 600 is the max
+        enemies.add(new Enemy(600, 300,50,50, 80, 90));
+        //x = 80 is the min
+        enemies.add(new Enemy(80, 300,50,50, 80, 90));
+        enemies.add(new Enemy(100, 300,50,50, 80, 90));
+        enemies.add(new Enemy(200, 300,50,50, 80, 90));
+        enemies.add(new Enemy(340, 300,50,50, 80, 90));
+        enemies.add(new Enemy(500, 300,50,50, 80, 90));
+
+        enemies.add(new Enemy(80, 400,50,80, 80, 90));
+        enemies.add(new Enemy(100, 400,50,50, 80, 90));
+        enemies.add(new Enemy(200, 400,50,70, 80, 90));
+        enemies.add(new Enemy(340, 400,50,80, 80, 90));
+        enemies.add(new Enemy(500, 400,50,70, 80, 90));
+
+        enemies.add(new Enemy(80, 100,50,50, 80, 90));
+        enemies.add(new Enemy(100, 00,50,50, 80, 90));
+        enemies.add(new Enemy(200, 100,50,50, 80, 90));
+        enemies.add(new Enemy(340, 100,50,50, 80, 90));
+        enemies.add(new Enemy(500, 100,50,50, 80, 90));
+
+        enemies.add(new Enemy(80, 30,50,50, 80, 90));
+        enemies.add(new Enemy(100, 30,50,50, 80, 90));
+        enemies.add(new Enemy(200, 30,50,50, 80, 90));
+        enemies.add(new Enemy(340, 30,50,50, 80, 90));
+        enemies.add(new Enemy(500, 30,50,50, 80, 90));
+
+        enemies.add(new Enemy(80, 200,50,50, 80, 90));
+        enemies.add(new Enemy(100, 200,50,50, 80, 90));
+        enemies.add(new Enemy(200, 200,50,50, 80, 90));
+        enemies.add(new Enemy(340, 200,50,50, 80, 90));
+        enemies.add(new Enemy(500, 200,50,50, 80, 90));
+
+        enemies.add(new Enemy(80, 500,50,50, 80, 90));
+        enemies.add(new Enemy(100, 500,50,50, 80, 90));
+        enemies.add(new Enemy(200, 500,50,50, 80, 90));
+        enemies.add(new Enemy(340, 500,50,50, 80, 90));
+        enemies.add(new Enemy(500, 500,50,50, 80, 90));
+
+
+
+        enemies.add(new Enemy(300, 300,50,50, 80, 90));
+        enemies.add(new Enemy(400, 100,50,50, 80, 90));
         enemies.add(new Enemy(90, 400,50,50, 40, 30));
         enemies.add(new Enemy(400, 90,60,80, 90,50));
         enemies.add(new Enemy(600, 500,50,50, 80, 43));
         enemies.add(new Enemy(550, 50,50,50, 80, 43));
-        enemies.add(new Enemy(150, 4610,50,30, 80, 43));
+        enemies.add(new Enemy(150, 460,50,30, 80, 43));
+        enemies.add(new Enemy(10, 40,50,30, 80, 43));
+        enemies.add(new Enemy(500, 60,50,30, 80, 43));
+        enemies.add(new Enemy(150, 20,50,30, 80, 43));
+        enemies.add(new Enemy(20, 560,50,30, 80, 43));
+
+
+
 
     }
 
